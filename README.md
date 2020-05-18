@@ -88,7 +88,23 @@ void Vector<T>::resize(int n)
 ```
 # Spartos analizė
 
+Laikai kiek užtrunka užpildyti tuščius vektorius int elementais:
+
 | Konteineris | 10000 | 100000 | 1000000 | 10000000 | 100000000 |
 |:------------|-------|--------|---------|----------|-----------|
 |std::vector  |0      |0,000563|0,0081169|0,0783952 |0,799119   |
 |Vector       |0      |0,000560|0,004987 |0,0630427 |0,554914   |
+
+Konteinerių perskirstymai užpildant 100000000 elementų
+
+| Konteineris | Perskirstymai |
+|:------------|:--------------|
+|std::vector  | 47            |
+|Vector       | 27            |
+
+Spartos analizė naudojant 100000 studentų įrašus
+
+| Konteineris | Laikas |
+|:------------|:-------|
+|std::vector  |2,62182 |
+|Vector       |9,54818 |
